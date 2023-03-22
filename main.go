@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
+	http.HandleFunc("/afafa", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("asdasd"))
 	})
 
@@ -14,7 +14,7 @@ func main() {
 		w.Write([]byte("текст"))
 	})
 
-	err := http.ListenAndServe("0.0.0.0:8000", nil)
+	err := http.ListenAndServe("127.0.0.1:8000", nil)
 	if err != nil {
 		log.Fatalf("error: %s", err)
 	}
