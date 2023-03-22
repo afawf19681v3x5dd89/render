@@ -10,7 +10,7 @@ func main() {
 		w.Write([]byte("asdasd"))
 	})
 
-	err := http.ListenAndServe("localhost:80", nil)
+	err := http.ListenAndServe(":80", nil)
 	if err != nil {
 		log.Fatalf("error: %s", err)
 	}
